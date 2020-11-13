@@ -1,10 +1,10 @@
-# Particl Service
+# Rhombus Service
 
-The Particl Service is a Node.js interface to [Particl Core](https://github.com/particl/particl-core) for querying information about the particl block chain. It will manage starting and stopping `particld` or connect to several running `particld` processes. It uses an instance of a Particl with additional indexes enabled for querying information about addresses and blocks. Results are cached for performance and there are several additional API methods added for common queries.
+The Rhombus Service is a Node.js interface to [Rhombus Core](https://github.com/rhombus/rhombus-core) for querying information about the rhombus block chain. It will manage starting and stopping `rhombusd` or connect to several running `rhombusd` processes. It uses an instance of a Rhombus with additional indexes enabled for querying information about addresses and blocks. Results are cached for performance and there are several additional API methods added for common queries.
 
 ## Configuration
 
-The default configuration will include a "spawn" configuration in "particld". This defines the location of the block chain database and the location of the `particld` daemon executable. The below configuration points to a local clone of `particl`, and will start `particld` automatically with your Node.js application.
+The default configuration will include a "spawn" configuration in "rhombusd". This defines the location of the block chain database and the location of the `rhombusd` daemon executable. The below configuration points to a local clone of `rhombus`, and will start `rhombusd` automatically with your Node.js application.
 
 ```json
   "servicesConfig": {
@@ -17,7 +17,7 @@ The default configuration will include a "spawn" configuration in "particld". Th
   }
 ```
 
-It's also possible to connect to separately managed `particld` processes with round-robin quering, for example:
+It's also possible to connect to separately managed `rhombusd` processes with round-robin quering, for example:
 
 ```json
   "servicesConfig": {
